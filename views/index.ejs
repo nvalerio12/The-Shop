@@ -1,1 +1,49 @@
-<h2>Homepage</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>The Shop</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><h1>The Shop</h1></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Favriotes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Post</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Following</a>
+              </li>
+            </ul>
+            <ul>
+                <% if (!currentUser) {%>
+                  <li><a href="/auth/signup">Signup</a></li>
+                  <li><a href="/auth/login">Login</a></li>
+                <% } else { %>
+                <li><a href="/auth/logout">Logout</a></li>
+                <li><a href="/profile">Profile</a></li>
+                <% } %>
+              </ul>
+          </div>
+        </div>
+      </nav>
+  <div class="container">
+    <a href="/auth/new" class="btn btn-success">New Article</a>
+
+  </div>
+</body>
+</html>
