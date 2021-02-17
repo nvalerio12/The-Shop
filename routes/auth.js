@@ -5,6 +5,10 @@ const router = express.Router();
 // import database
 const db = require('../models');
 
+router.get('/new', (req, res) => {
+  res.render('auth/new')
+})
+
 router.get('/signup', (req, res) => {
   res.render('auth/signup'); // this is a form
 });
