@@ -31,19 +31,19 @@
             </ul>
             <ul>
                 <% if (!currentUser) {%>
-                  <li><a href="/auth/signup">Signup</a></li>
-                  <li><a href="/auth/login">Login</a></li>
+                  <li><a class='signup' href="/auth/signup">Signup</a></li>
+                  <li><a class='login' href="/auth/login">Login</a></li>
                 <% } else { %>
-                <li><a href="/auth/logout">Logout</a></li>
-                <li><a href="/profile">Profile</a></li>
+                <li><a class='logout' href="/auth/logout">Logout</a></li>
+                <li><a class='profile' href="/profile">Profile</a></li>
                 <% } %>
               </ul>
           </div>
         </div>
       </nav>
   <div class="container">
-    <a href="/auth/new" class="btn btn-success">New Article</a>
-
+    <a href="/auth/new" class="btn btn-success">Post</a>
+    <%= data %>
   </div>
 </body>
 </html>
