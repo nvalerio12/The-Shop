@@ -45,6 +45,7 @@ app.use((req, res, next) => {
 
 // Controllers
 app.use('/auth', require('./routes/auth'));
+app.use('/article', require('./routes/article-controler'));
 
 app.get('/', (req, res) => {
   const options = {
@@ -57,7 +58,7 @@ app.get('/', (req, res) => {
     }
   };
   axios.request(options).then(function (response) {
-    console.log(response.data);
+    console.log(response.data[0]);
     res.render('index', { data: response.data })
   }).catch(function (error) {
     console.error(error);

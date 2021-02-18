@@ -1,13 +1,15 @@
 const express = require('express');
 const passport = require('../config/ppConfig');
 const router = express.Router();
+const Article = require('./../models/article');
 
 // import database
 const db = require('../models');
+const article = require('./../models/article');
 
 router.get('/new', (req, res) => {
   res.render('auth/new')
-})
+});
 
 router.get('/signup', (req, res) => {
   res.render('auth/signup'); // this is a form
@@ -22,6 +24,39 @@ router.get('/logout', (req, res) => {
   req.flash('success', 'Logging out... See you next time!');
   res.redirect('/');
 });
+
+router.get('/:id', (req, res) => {
+
+});
+
+// router.post('/', async (req, res) => {
+//   const article = new Article({
+//     title: req.boby.title,
+//     description: req.body.description
+//   })
+//   try { 
+//     await article.save()
+//     res.redirect(`/auth/${auth.id}`)
+//   } catch (e) {
+//       res.render('auth/new', { article: article })
+//   }
+// });
+
+// router.post('/', async (req, res) => {
+//   try { 
+//     const articleToCreate = {
+//       title: req.boby.title,
+//       description: req.body.description
+//     }
+//     const createdArticle = await Article.create(articleToCreate)
+//     console.log('here is created art');
+//     console.log(createdArticle);
+//     res.redirect(`/auth`)
+//   } catch (e) {
+//       res.render('auth/new', { article: article })
+//   }
+// });
+
 
 
 // What routes do we need (post routes)
@@ -64,6 +99,5 @@ router.post('/login', passport.authenticate('local', {
   successFlash: 'Welcome back ...',
   failureFlash: 'Either email or password is incorrect' 
 }));
-
 
 module.exports = router;
