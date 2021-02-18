@@ -8,28 +8,15 @@
   <title>The Shop</title>
 </head>
 <body>
-  <div class="container">
-    <a href="/auth/new" class="btn btn-success" id="post">Post</a>
-    </div>
-    <div id="timeline">
-        <ul id="news">
-            <li>
-                <div id="updated-news">
-                    <p id="news1">
-                        <%= data[0] %>
-                    </p>
-                    <p id="news2">
-                        <%= data[1] %>
-                    </p>
-                    <p id="news3">
-                        <%= data[2] %>
-                    </p>
-                    <p id="news4">
-                        <%= data[3] %>
-                    </p>
-                </div>
-            </li> 
-        </ul>
-    </div>
+    <h1 class="header">Feed</h1>
+    <% for( let i = 0; i < data.length; i++) { %> 
+        <% let article = data[i] %> 
+        <div class="container">
+            <img src="<%= article.img %>" alt="">
+            <h2><%= article.title %></h2>
+            <p><%= article.content %></p>
+
+        </div>
+    <% } %> 
 </body>
 </html>

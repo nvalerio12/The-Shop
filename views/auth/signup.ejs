@@ -1,12 +1,17 @@
 <form action="/auth/signup" method="POST">
-  <label for="new-email">Email</label>
-  <input id="new-email" type="email" name="email">
+  <div class="form-group">
+    <label for="new-name">Name</label>
+    <input id="new-name" type="text" name="name" class="form-control" placeholder="Enter Name">
+  </div>
 
-  <label for="new-name">Name</label>
-  <input id="new-name" type="text" name="name">
+  <div class="form-group">
+    <label for="new-email">Email</label>
+    <input id="auth-email" type="email" name="email" class="form-control" placeholder="Enter Email">
+  </div>
 
-  <label for="new-password">Password</label>
-  <input id="new-password" type="password" name="password">
-
-  <input type="submit" value="Sign up">
+  <div class="form-group">
+    <label for="new-password">Password</label>
+    <input id="new-password" type="password" name="password" class="form-control" placeholder="Enter Password">
+  </div>
+  <button type="submit" class="btn btn-primary">Signup</button>
 </form>

@@ -50,15 +50,15 @@ app.use('/article', require('./routes/article-controler'));
 app.get('/', (req, res) => {
   const options = {
     method: 'GET',
-    url: 'https://wikiapi.p.rapidapi.com/api/v1/wiki/home/news',
-    params: {lan: 'en'},
+    url: 'https://newscafapi.p.rapidapi.com/apirapid/news/sports/',
+    params: {q: 'news'},
     headers: {
       'x-rapidapi-key': '80dc85bf40msh8a4e6b00e5b37f2p1c2e55jsn47af76417f6b',
-      'x-rapidapi-host': 'wikiapi.p.rapidapi.com'
+      'x-rapidapi-host': 'newscafapi.p.rapidapi.com'
     }
   };
   axios.request(options).then(function (response) {
-    console.log(response.data[0]);
+    console.log(response.data);
     res.render('index', { data: response.data })
   }).catch(function (error) {
     console.error(error);
