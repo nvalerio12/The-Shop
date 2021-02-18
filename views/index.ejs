@@ -9,8 +9,27 @@
 </head>
 <body>
   <div class="container">
-    <!-- <a href="/auth/new" class="btn btn-success" id="post">Post</a> -->
-    <!-- <%= data %> -->
-  </div>
+    <a href="/auth/new" class="btn btn-success" id="post">Post</a>
+    </div>
+    <div id="timeline">
+        <ul id="news">
+            <li>
+                <div id="updated-news">
+                    <p id="news1">
+                        <%= data[0] %>
+                    </p>
+                    <p id="news2">
+                        <%= data[1] %>
+                    </p>
+                    <p id="news3">
+                        <%= data[2] %>
+                    </p>
+                    <p id="news4">
+                        <%= data[3] %>
+                    </p>
+                </div>
+            </li> 
+        </ul>
+    </div>
 </body>
 </html>
