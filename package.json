@@ -14,7 +14,7 @@
     "type": "git",
     "url": "git+https://github.com/romebell/express-authentication.git"
   },
-  "author": "Rome Bell",
+  "author": "Nelson Valerio",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/romebell/express-authentication/issues"
@@ -23,6 +23,7 @@
   "dependencies": {
     "axios": "^0.21.0",
     "bcrypt": "^5.0.0",
+    "bootstrap": "^5.0.0-beta2",
     "connect-flash": "^0.1.1",
     "dotenv": "^8.2.0",
     "ejs": "^3.1.5",
@@ -33,7 +34,8 @@
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
     "pg": "^8.5.1",
-    "sequelize": "^6.3.5"
+    "sequelize": "^6.3.5",
+    "sequelize-cli": "^6.2.0"
   },
   "devDependencies": {
     "chai": "^4.2.0",

@@ -6,17 +6,30 @@
     <title>The Shop</title>
     <link rel="stylesheet" href="/css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <!-- <style>
+      .navbar-dar{
+        padding: 50px 0;
+      }
+      .bgred {
+        background: navy;
+      }
+    </style> -->
+
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <a class="navbar-brand" href="#"><h1>The Shop</h1></a>
-      <div class="collapse navbar-collapse">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
             <a href="/" class="nav-link">Home</a>
           </li>
           <li>
-            <a href="/article/allposts" class="nav-link">Timeline</a>
+            <a href="/auth/allposts" class="nav-link">Timeline</a>
           </li>
           <li class="nav-item">
             <a href="/auth/new" class="nav-link" id="post">Post</a>
