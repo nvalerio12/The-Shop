@@ -5,7 +5,6 @@ const Article = require('./../models/article');
 
 // import database
 const db = require('../models');
-const article = require('./../models/article');
 
 router.get('/new', (req, res) => {
   res.render('auth/new')
@@ -53,11 +52,9 @@ router.get('/:id', (req, res) => {
 //     console.log(createdArticle);
 //     res.redirect(`/auth`)
 //   } catch (e) {
-//       res.render('auth/new', { article: article })
-//   }
-// });
-
-
+  //       res.render('auth/new', { article: article })
+  //   }
+  // });
 
 // What routes do we need (post routes)
 router.post('/signup', (req, res) => {
@@ -99,5 +96,25 @@ router.post('/login', passport.authenticate('local', {
   successFlash: 'Welcome back ...',
   failureFlash: 'Either email or password is incorrect' 
 }));
+
+router.get('/allposts', async (req, res) =>{
+  const allPosts = await db.article.findAll() 
+  res.render('allPosts', { allPosts })
+}); 
+
+router.post('/article/allposts', async (req, res) => {
+try { 
+    console.log(req.body.title)
+  const createdArticle = await db.article.create({ 
+      title: req.body.title,
+      description: req.body.description
+  })
+  const newPost = createdArticle.get()
+  console.log(newPost)
+  res.redirect('/allposts')
+} catch (e) {
+  console.log(e)
+}
+});
 
 module.exports = router;
