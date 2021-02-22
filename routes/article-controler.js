@@ -14,8 +14,8 @@ router.post('/allposts', async (req, res) => {
   try { 
       console.log(req.body.title)
     const createdArticle = await db.article.create({ 
-        title: req.body.title,
-        description: req.body.description
+      title: req.body.title,
+      description: req.body.description
     })
     const newPost = createdArticle.get()
     console.log(newPost)

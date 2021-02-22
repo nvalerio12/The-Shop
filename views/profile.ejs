@@ -7,18 +7,19 @@
         <title>Document</title>
     </head>
     <body class="profile-page">
+        <div class="container p-3 my-3 border" >
         <div class="row py-5 px-4">
             <div class="col-md-5 mx-auto">
                 <!-- Profile widget -->
                 <div class="bg-white shadow rounded overflow-hidden">
                     <div class="px-4 pt-0 pb-4 cover">
-                        <div class="media align-items-end profile-head">
-                            <form action="/profile/<%= id %>/?_method=PUT" method="POST" enctype="multipart/form-data">
-                                <label for="inputFile">Image</label>
-                                <input type="file" name="inputFile">
-                                <button type="submit" class="imgbtn">Upload Image</button>
-                            </form>
-                            <div class="media-body mb-5 text-white">
+                        <!-- <div class="media align-items-end profile-head">
+                            
+                            <label for="inputFile">Image</label>
+                            <input type="file" name="inputFile">
+                            <button type="submit" class="imgbtn">Upload Image</button>
+                            
+                            <div class="media-body mb-5 text-white"> -->
                                 <p class="small mb-4"> <i class="fas fa-map-marker-alt mr-2"></i></p>
                             </div>
                         </div>
@@ -28,6 +29,7 @@
                         <div>
                             <p>Name: <%= name %></p>
                             <p>Email: <%= email %></p>
+                            <!-- <img src=" alt="Profile Picture"> -->
                         </div>
                     </div>
                     <div class="py-4 px-4">
@@ -39,5 +41,7 @@
             </div>
         </div>
         
+
+        </div>
     </body>
     </html>
