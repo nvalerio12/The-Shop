@@ -7,12 +7,12 @@
 </head>
 <body>
     <h1 class="timeline">Timeline</h1>
-    <div class="container p-3 my-3 border" >
-        <% for (let i = 0; i < allPosts.length; i++) { %> 
-            <% let postItem = allPosts[i].get(); %> 
-            <h2><%= postItem.title %></h2>
+    <% for (let i = 0; i < allPosts.length; i++) { %> 
+        <% let postItem = allPosts[i].get(); %> 
+        <div class="container p-3 my-3 border" >
+        <h2><%= postItem.title %></h2>
             <p>Description: <%= postItem.description %></p>
+        </div>
         <% } %> 
-    </div>
 </body>
 </html>
