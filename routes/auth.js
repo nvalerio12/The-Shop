@@ -97,24 +97,4 @@ router.post('/login', passport.authenticate('local', {
   failureFlash: 'Either email or password is incorrect' 
 }));
 
-router.get('/allposts', async (req, res) =>{
-  const allPosts = await db.article.findAll() 
-  res.render('allPosts', { allPosts })
-}); 
-
-router.post('/article/allposts', async (req, res) => {
-try { 
-    console.log(req.body.title)
-  const createdArticle = await db.article.create({ 
-      title: req.body.title,
-      description: req.body.description
-  })
-  const newPost = createdArticle.get()
-  console.log(newPost)
-  res.redirect('/allposts')
-} catch (e) {
-  console.log(e)
-}
-});
-
 module.exports = router;

@@ -45,7 +45,7 @@ app.use((req, res, next) => {
 
 // Controllers
 app.use('/auth', require('./routes/auth'));
-// app.use('/article', require('./routes/article-controler'));
+app.use('/article', require('./routes/article-controler'));
 
 app.get('/', (req, res) => {
   const options = {
