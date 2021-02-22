@@ -1,6 +1,5 @@
 const express = require('express');
 const router = express.Router();
-
 // import database
 const db = require('../models');
 
@@ -18,10 +17,11 @@ router.post('/article', async (req, res) => {
     })
     const newPost = createdArticle.get()
     console.log(newPost)
-    res.redirect('/allposts')
+    res.redirect('/')
   } catch (e) {
     console.log(e)
   }
 });
+
 
 module.exports = router;

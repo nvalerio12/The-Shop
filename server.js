@@ -70,6 +70,11 @@ app.get('/profile', isLoggedIn, (req, res) => {
   res.render('profile', { id, name, email });
 });
 
+// router.delete('/allposts/:idx', (req, res) => {
+//   const deletePost = fs.readFileSync()
+// });
+
+
 //Port
 const PORT = process.env.PORT || 3000;
 const server = app.listen(PORT, () => {
